@@ -1,0 +1,16 @@
+ame: Simple Pipeline
+
+on: [push]
+
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Multiline-Commands
+        run: |
+          node -v
+          npm -v
